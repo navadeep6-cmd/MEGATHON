@@ -1,0 +1,24 @@
+# Pinned top-level dependencies (Python 3.9 - 3.11).
+# Install through your organisation's internal package registry, e.g.
+#   pip install --index-url <INTERNAL_REGISTRY_URL> -r requirements.txt
+# then freeze the full resolved set into the lockfile:
+#   pip freeze > requirements.lock
+torch==2.2.2
+torchvision==0.17.2
+open_clip_torch==2.24.0
+numpy==1.26.4
+pillow==10.4.0
+scikit-learn==1.5.2
+# faiss is optional (exact numpy search is used without it). Installed only on Linux, where it
+# enables HNSW / IVF-PQ indexes; on macOS/Windows its OpenMP runtime can clash with torch's.
+faiss-cpu==1.8.0; sys_platform == "linux"
+pyyaml==6.0.2
+requests==2.32.3
+tqdm==4.66.5
+fastapi==0.115.0
+uvicorn==0.30.6
+python-multipart==0.0.9   # multipart form parsing for the /suggest endpoint
+gradio==4.44.1
+pydantic==2.10.6          # gradio 4.44 breaks with pydantic >= 2.11
+huggingface_hub==0.25.2   # gradio 4.x needs < 1.0
+pytest==8.3.3

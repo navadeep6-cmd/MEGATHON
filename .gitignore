@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+.env*
+
+# large / regenerable outputs
+data/
+artifacts/
+
+# keep generated reports small and reviewable
+reports/*.csv
+
+# shareable bundle
+megathon_code.zip
